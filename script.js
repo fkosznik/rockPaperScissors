@@ -1,4 +1,7 @@
 const win = document.querySelector('#win');
+let scoreValue = document.querySelector('#score');
+score = 0;
+scoreValue.textContent = score;
 
 function run1() {
   document.querySelector('#output').style.display = 'inline-block';
@@ -12,10 +15,14 @@ function run1() {
     document.querySelector('#output').textContent = 'paper';
     document.querySelector('#img1').src = './img/img2.jpeg';
     win.textContent = 'You lost';
+    score -= 1;
+    scoreValue.textContent = score;
   } else {
     document.querySelector('#output').textContent = 'scissors';
     document.querySelector('#img1').src = './img/img3.jpeg';
     win.textContent = 'You won!';
+    score += 1;
+    scoreValue.textContent = score;
   }
 }
 function run2() {
@@ -26,6 +33,8 @@ function run2() {
     document.querySelector('#output').textContent = 'rock';
     document.querySelector('#img1').src = './img/img1.jpg';
     win.textContent = 'You won!';
+    score += 1;
+    scoreValue.textContent = score;
   } else if (number === 1) {
     document.querySelector('#output').textContent = 'paper';
     document.querySelector('#img1').src = './img/img2.jpeg';
@@ -34,6 +43,8 @@ function run2() {
     document.querySelector('#output').textContent = 'scissors';
     document.querySelector('#img1').src = './img/img3.jpeg';
     win.textContent = 'You lost!';
+    score -= 1;
+    scoreValue.textContent = score;
   }
 }
 function run3() {
@@ -44,10 +55,14 @@ function run3() {
     document.querySelector('#output').textContent = 'rock';
     document.querySelector('#img1').src = './img/img1.jpg';
     win.textContent = 'You lost';
+    score -= 1;
+    scoreValue.textContent = score;
   } else if (number === 1) {
     document.querySelector('#output').textContent = 'paper';
     document.querySelector('#img1').src = './img/img2.jpeg';
     win.textContent = 'You won';
+    score += 1;
+    scoreValue.textContent = score;
   } else {
     document.querySelector('#output').textContent = 'scissors';
     document.querySelector('#img1').src = './img/img3.jpeg';
